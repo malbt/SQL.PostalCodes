@@ -26,3 +26,9 @@ select distinct timezone
 from zipcodes
 order by timezone;
 
+# return zipcode, city, state, and county of all of the FALSE or NULL timezones
+
+SELECT zip, city, state, county, timezone
+FROM zipcodes
+WHERE timezone = 'FALSE'
+OR timezone IS NULL;
